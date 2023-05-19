@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: black; */
+  background: linear-gradient(100deg, #44579c, #bf09d7);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-task-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
+
+.add-task-form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-task-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-tasks {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filter-tasks label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-tasks input[type="radio"] {
+  margin-right: 5px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task.completed {
+  background-color: #e6f7ed;
+}
+
+.task.completed .task-name {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.btn-clear-completed {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
